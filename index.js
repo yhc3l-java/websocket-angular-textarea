@@ -1,11 +1,15 @@
-var WebSocketServer = require('websocket').server;
-var express = require('express');
-var http = require('http');
-var app = express();
+var WebSocketServer = require('websocket').server,
+    express = require('express'),
+    http = require('http'),
+    app = express(),
+    port = 8080,
+    connections = {},
+    connectionId = 0,
+    serverText = '';
 
 app.use(express.static(__dirname + "/public"));
 app.server = http.createServer(app);
-app.server.listen(8080);
+app.server.listen(port);
 
 var wsServer = new WebSocketServer({
     httpServer: app.server,
@@ -15,9 +19,6 @@ var wsServer = new WebSocketServer({
     fragmentOutgoingMessages: false
 });
 
-var connections = {},
-    connectionId = 0,
-    serverText = '';
 
 function responseObject() {
     return JSON.stringify({
@@ -57,4 +58,4 @@ wsServer.on('request', function (request) {
     });
 });
 
-console.log("Textarea test app ready");
+console.log("Textarea socket server running on port " + port);
