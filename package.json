@@ -1,0 +1,16 @@
+{
+  "name": "websocket-angular-textarea",
+  "version": "0.0.1",
+  "description": "Very simple demo of a connection to a standard websocket in angular",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.8.7",
+    "websocket": "^1.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tom Blackmore",
+  "license": "ISC"
+}
