@@ -18,6 +18,7 @@ var WebSocketServer = require('websocket').server;
 var express = require('express');
 var http = require('http');
 var app = express();
+var launcher = require('browser-launcher');
 
 app.use(express.static(__dirname + "/public"));
 app.server = http.createServer(app);
@@ -75,3 +76,16 @@ wsServer.on('request', function (request) {
 });
 
 console.log("Textarea test app ready");
+launcher(function (err, launch) {
+    if (err) return console.error(err);
+    /*
+    console.log('# available browsers:');
+    console.dir(launch.browsers);
+    */
+    launch('http://localhost:8080', {
+        browser: 'chrome'
+    }, function (err, ps) {
+        if (err) return console.error(err);
+    });
+
+});

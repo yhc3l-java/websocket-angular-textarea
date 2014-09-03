@@ -4,6 +4,7 @@
   "description": "Very simple demo of a connection to a standard websocket in angular",
   "main": "index.js",
   "dependencies": {
+    "browser-launcher": "^0.3.4",
     "express": "^4.8.7",
     "websocket": "^1.0.8"
   },
