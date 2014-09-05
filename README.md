@@ -9,11 +9,11 @@ node index.js
 ```
 Open a couple of browsers and surf to http://localhost:8080 . The text area should sync between the two browsers.
 
-# websocket server
+## websocket server
 
 Code to the server is in index.js
 
-# angularjs client
+## angularjs client
 
 Code for the client is in the public folder.
 
