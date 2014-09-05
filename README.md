@@ -17,3 +17,5 @@ Code to the server is in index.js
 
 Code for the client is in the public folder.
 
+public/js/factories.js -> The file with the websocket connection. It transforms the websocket event to an angular event, that the controller listens to.
+
