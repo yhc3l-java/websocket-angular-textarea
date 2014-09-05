@@ -2,7 +2,7 @@ websocket-angular-textarea
 ==========================
 
 ```
-git clone https://github.com/yhc3l-java/websocket-angular-textarea.git
+git clone git@github.com:yhc3l-java/websocket-angular-textarea.git
 cd websocket-angular-textarea
 npm install
 node index.js
